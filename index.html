@@ -3,161 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ગુડલક સુરતી આમલેટ - સિદ્ધપુર</title>
+    <title>ગુડલક સુરતી ઓમ્લેટ - સિદ્ધપુર</title>
     <style>
-        /* एंड्रॉइड फोन और गिटहब के लिए विशेष इन-बिल्ट मॉडर्न स्टाइल */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fdfaf6; color: #333; line-height: 1.6; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #fffaf0; text-align: center; color: #333; }
+        header { background-color: #ff9900; padding: 25px 15px; font-size: 26px; font-weight: bold; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .hero { padding: 40px 20px; background: #ffe0b2; border-bottom: 3px dashed #ff9900; }
+        .hero h2 { margin: 0 0 10px 0; color: #d84315; font-size: 28px; }
+        .hero p { margin: 0; font-size: 16px; font-weight: 500; color: #5d4037; }
         
-        /* हेडर और नेविगेशन */
-        header { background: #f59e0b; color: white; padding: 15px 10px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        header h1 { font-size: 24px; font-weight: 700; margin-bottom: 5px; color: #fff; }
+        /* Music Player Styling */
+        .music-container { background: #fff; padding: 15px; margin: 15px auto; max-width: 570px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .music-container p { margin: 0 0 8px 0; font-weight: bold; color: #e65100; font-size: 14px; }
+        audio { width: 100%; max-width: 400px; }
+
+        .menu-container { padding: 25px 15px; max-width: 600px; margin: auto; }
+        .menu-title { font-size: 24px; color: #e65100; border-bottom: 3px solid #ff9900; padding-bottom: 8px; margin-bottom: 25px; font-weight: bold; text-transform: uppercase; }
+        .menu-section { margin-bottom: 25px; text-align: left; }
+        .section-name { font-size: 18px; color: #d84315; font-weight: bold; margin-bottom: 10px; background: #ffe0b2; padding: 5px 10px; border-radius: 4px; }
+        .menu-item { display: flex; justify-content: space-between; background: white; padding: 15px; margin-bottom: 12px; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.05); font-weight: 600; font-size: 16px; border-left: 5px solid #ff9900; }
+        .price { color: #2e7d32; font-weight: bold; }
         
-        /* स्टाइलिश हीरो बैनर */
-        .hero { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://unsplash.com'); background-size: cover; background-position: center; color: white; padding: 50px 20px; text-align: center; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
-        .hero .badge { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); padding: 5px 15px; border-radius: 50px; font-size: 12px; display: inline-block; margin-bottom: 15px; color: #fef08a; font-weight: bold; text-transform: uppercase; }
-        .hero h2 { font-size: 32px; margin-bottom: 12px; color: #fbbf24; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
-        .hero p { font-size: 16px; margin-bottom: 25px; opacity: 0.95; max-w: 500px; margin-left: auto; margin-right: auto; }
+        /* Photo Gallery Grid Styling */
+        .gallery-title { font-size: 22px; color: #e65100; margin: 30px 0 15px 0; font-weight: bold; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 0 15px; max-width: 600px; margin: 0 auto 30px auto; }
+        .gallery-item { background: #fff; padding: 5px; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); border: 1px solid #ffe0b2; }
+        .gallery-item img { width: 100%; height: 150px; object-fit: cover; border-radius: 6px; }
+
+        .contact { background-color: #212121; color: white; padding: 30px 20px; margin-top: 40px; border-top-left-radius: 20px; border-top-right-radius: 20px; }
+        .contact h3 { color: #ff9900; margin-top: 0; font-size: 20px; }
+        .contact p { margin: 8px 0; font-size: 15px; color: #e0e0e0; line-height: 1.6; }
         
-        /* वर्किंग व्हाट्सएप बटन */
-        .btn-whatsapp { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: white; padding: 14px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; box-shadow: 0 6px 20px rgba(34,197,94,0.4); font-size: 18px; transition: transform 0.2s; }
-        .btn-whatsapp:active { transform: scale(0.98); }
-        
-        /* फोटो ग्रिड सेक्शन */
-        .photo-section { padding: 30px 15px; max-w: 600px; margin: 0 auto; }
-        .section-title { text-align: center; font-size: 24px; margin-bottom: 20px; color: #1f2937; position: relative; }
-        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: #f59e0b; margin: 8px auto 0 auto; border-radius: 2px; }
-        .grid-2 { display: grid; grid-template-columns: 1fr; gap: 15px; }
-        @media(min-width: 480px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
-        .img-box { background: white; border-radius: 20px; overflow: hidden; height: 200px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); border: 1px solid #e5e7eb; }
-        .img-box img { w-shadow: 100%; width: 100%; height: 100%; object-fit: cover; }
-        
-        /* जानकारी कार्ड्स */
-        .info-card { background: white; padding: 20px; border-radius: 20px; margin: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #fef3c7; display: flex; align-items: center; gap: 15px; }
-        .info-card .icon { font-size: 30px; }
-        .info-card h4 { font-size: 16px; color: #1f2937; font-weight: bold; }
-        .info-card p { font-size: 14px; color: #4b5563; }
-        
-        /* स्टाइलिश मेनू कार्ड्स */
-        .menu-grid { padding: 15px; max-w: 600px; margin: 0 auto; }
-        .menu-card { background: white; border-radius: 24px; overflow: hidden; margin-bottom: 25px; box-shadow: 0 6px 15px rgba(0,0,0,0.06); border: 1px solid #e5e7eb; }
-        .menu-img { height: 180px; overflow: hidden; position: relative; }
-        .menu-img img { width: 100%; height: 100%; object-fit: cover; }
-        .menu-tag { position: absolute; top: 12px; left: 12px; background: #f59e0b; color: white; padding: 4px 12px; border-radius: 50px; font-size: 11px; font-weight: bold; }
-        .menu-tag.popular { background: #ef4444; }
-        .menu-tag.regular { background: #f97316; }
-        .menu-details { padding: 20px; }
-        .menu-details h4 { font-size: 20px; color: #111827; font-weight: bold; }
-        .menu-details p { font-size: 14px; color: #6b7280; margin-top: 6px; }
-        
-        /* डिलीवरी बॉक्स */
-        .delivery-box { background: #fffbeb; border: 1px solid #fef3c7; padding: 25px 20px; border-radius: 24px; text-align: center; margin: 25px 15px; box-shadow: 0 4px 10px rgba(245,158,11,0.05); }
-        .delivery-box h3 { color: #b45309; font-size: 22px; margin-bottom: 5px; }
-        .delivery-box .price { font-size: 20px; color: #ea580c; font-weight: bold; margin-bottom: 8px; }
-        .delivery-box .note { background: #fef3c7; color: #78350f; padding: 12px; border-radius: 12px; font-size: 13px; margin-top: 15px; font-weight: bold; }
-        
-        /* फुटर कार्ड */
-        footer { background: #0b0f19; color: #9ca3af; padding: 40px 20px 20px 20px; text-align: center; border-top-left-radius: 30px; border-top-right-radius: 30px; margin-top: 40px; }
-        .footer-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 25px 20px; border-radius: 24px; max-w: 450px; margin: 0 auto 25px auto; text-align: left; }
-        .footer-card h3 { color: white; margin-bottom: 15px; font-size: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
-        .footer-card p { margin-bottom: 12px; font-size: 14px; display: flex; gap: 10px; }
-        .btn-insta { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; text-decoration: none; padding: 10px 20px; border-radius: 12px; font-weight: bold; display: inline-block; font-size: 14px; margin-top: 10px; text-align: center; width: 100%; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; font-size: 12px; opacity: 0.5; }
+        /* Buttons */
+        .btn-call { display: inline-block; background: #e65100; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; margin-top: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: 0.3s; width: 80%; max-width: 300px; }
+        .btn-whatsapp { display: inline-block; background: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; margin-top: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: 0.3s; width: 80%; max-width: 300px; }
+        .btn-maps { display: inline-block; background: #4285F4; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; margin-top: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: 0.3s; width: 80%; max-width: 300px; }
+        .btn-insta { display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; margin-top: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: 0.3s; width: 80%; max-width: 300px; }
+        .btn-call:active, .btn-whatsapp:active, .btn-maps:active, .btn-insta:active { transform: scale(0.98); }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>ગુડલક સુરતી આમલેટ</h1>
-    </header>
+    <header>🍳 ગુડલક સુરતી ઓમ્લેટ 🍳</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="badge">🍳 સિદ્ધપુરનો અસલી સ્વાદ</div>
-        <h2>ગુડલક સુરતી આમલેટ</h2>
-        <p>તાવડિયા ચોકડી પાસે હવે અસલી સુરતી ટેસ્ટમાં લાવો, લોચો, લચકો અને ચટાકેદાર આમલેટનો ગરમા-ગરમ આનંદ માણો!</p>
-        
-        <!-- FIXED 100% WORKING WHATSAPP LINK -->
-        <a href="https://whatsapp.com." target="_blank" class="btn-whatsapp">
-            💬 વોટ્સએપ ઓર્ડર કરો
-        </a>
-    </section>
-
-    <!-- Stall Photos Highlight -->
-    <section class="photo-section">
-        <h3 class="section-title">📸 અમારી લારી અને મેકિંગ ઝલક</h3>
-        <div class="grid-2">
-            <div class="img-box">
-                <img src="https://unsplash.com" alt="Goodluck Stall">
-            </div>
-            <div class="img-box">
-                <img src="https://unsplash.com" alt="Making Egg Food">
-            </div>
-        </div>
-    </section>
-
-    <!-- Operating Info Cards -->
-    <div class="info-card" style="background: linear-gradient(135deg, #ffedd5 0%, #fef3c7 100%);">
-        <div class="icon">🕒</div>
-        <div>
-            <h4>ઓપરેટિંગ સમય</h4>
-            <p>સાંજે ૫:૦૦ થી રાત્રે ૧૧:૦૦ (દરરોજ હાજર)</p>
-        </div>
+    <div class="hero">
+        <h2>અસલી સુરતી સ્વાદ, હવે આપણા સિદ્ધપુરમાં!</h2>
+        <p>તાજા, મસાલેદાર અને લઝીઝ ઇંડાની આઇટમ્સ</p>
     </div>
 
-    <div class="info-card" style="background: linear-gradient(135deg, #fee2e2 0%, #ffedd5 100%);">
-        <div class="icon">🛵</div>
-        <div>
-            <h4>ઝડપી હોમ ડિલિવરી</h4>
-            <p>માત્ર સિદ્ધપુરમાં ઉપલબ્ધ (રૂ. ૫૦ એક્સ્ટ્રા ચાર્જ)</p>
-        </div>
+    <!-- Background Music Section -->
+    <div class="music-container">
+        <p>🎵 પ્લે કરો અને મેનૂ જુઓ (Music)</p>
+        <audio controls loop>
+            <source src="background-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 
     <!-- Menu Section -->
-    <section class="menu-grid">
-        <h3 class="section-title">🍽️ અમારી ખાસ આઇટમો</h3>
+    <div class="menu-container">
+        <div class="menu-title">મેનૂ (Menu)</div>
         
-        <!-- Item 1 -->
-        <div class="menu-card">
-            <div class="menu-img">
-                <img src="https://unsplash.com" alt="સુરતી લોચો">
-                <span class="menu-tag">ખાસ આઇટમ</span>
+        <div class="menu-section">
+            <div class="section-name">સુરતી સ્પેશિયલ રેગ્યુલર</div>
+            <div class="menu-item">
+                <span>સુરતી મસાલા ઓમ્લેટ (Surti Masala Omelette)</span>
+                <span class="price">₹50</span>
             </div>
-            <div class="menu-details">
-                <h4>સ્વાદિષ્ટ સુરતી લોચો</h4>
-                <p>સ્પેશિયલ સિક્રેટ મસાલા, ઝીણી સેવ અને અમૂલ બટર સાથે ગરમા-ગરમ પીરસવામાં આવતો અસલી સુરતી સ્વાદ.</p>
+            <div class="menu-item">
+                <span>સ્પેશિયલ ઇંડા ભુરજી (Egg Bhurji)</span>
+                <span class="price">₹60</span>
             </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="menu-card">
-            <div class="menu-img">
-                <img src="https://unsplash.com" alt="ચટાકેદાર લચકો">
-                <span class="menu-tag popular">પોપ્યુલર</span>
-            </div>
-            <div class="menu-details">
-                <h4>ચટાકેદાર લચકો</h4>
-                <p>તીખા અને ચટાકેદાર ગ્રીન ગ્રેવી મસાલાઓનું અદભુત મિશ્રણ જે ઇંડાના શોખીનોનું મન મોહી લેશે.</p>
+            <div class="menu-item">
+                <span>ઇંડા હાફ ફ્રાય (Egg Half Fry)</span>
+                <span class="price">₹40</span>
             </div>
         </div>
 
-        <!-- Item 3 -->
-        <div class="menu-card">
-            <div class="menu-img">
-                <img src="https://unsplash.com" alt="આમલેટ">
-                <span class="menu-tag regular">રેગ્યુલર</span>
+        <div class="menu-section">
+            <div class="section-name">ગુડલક સ્પેશિયલ વેરાયટી</div>
+            <div class="menu-item">
+                <span>ઇંડા ઘોટાળો - સુરતી સ્ટાઇલ (Egg Ghotalo)</span>
+                <span class="price">₹120</span>
             </div>
-            <div class="menu-details">
-                <h4>સાદા બોઇલ અને આમલેટ</h4>
-                <p>તાજા ફાર્મના ઇંડામાંથી બનતી અત્યંત હાઇજીનિક, ક્રિસ્પી અને પ્રોટીનથી ભરપૂર રોજિંદી આઇટમો.</p>
+            <div class="menu-item">
+                <span>ઇંડા પાપલેટ / ગાર્લિક ફ્રાય (Egg Paplet)</span>
+                <span class="price">₹100</span>
+            </div>
+            <div class="menu-item">
+                <span>ચીઝ ઇંડા ઘોટાળો (Cheese Egg Ghotalo)</span>
+                <span class="price">₹140</span>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Delivery Box -->
-    <section class="delivery-box">
-        <h3>હોમ ડિલિવરી સર્વિસ</h3>
-        <p class="price">ડિલિવરી ચાર્જ: રૂ. ૫૦ એક્સ્ટ્રા</p>
-        <p>🛵 ઝડપી અને સ્વચ્છતા સાથે સેવા માત્ર સિદ્ધપુર પૂરતી જ.</p>
+    <!-- Photos Grid Section -->
+    <div class="gallery-title">📸 અમારી લઝીઝ વેરાયટીઝ (Photos)</div>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="egg1.jpg" alt="Egg Dish 1"></div>
+        <div class="gallery-item"><img src="egg2.jpg" alt="Egg Dish 2"></div>
+        <div class="gallery-item"><img src="egg3.jpg" alt="Egg Dish 3"></div>
+        <div class="gallery-item"><img src="egg4.jpg" alt="Egg Dish 4"></div>
+        <div class="gallery-item"><img src="egg5.jpg" alt="Egg Dish 5"></div>
+        <div class="gallery-item"><img src="egg6.jpg" alt="Egg Dish 6"></div>
+        <div class="gallery-item"><img src="egg7.jpg" alt="Egg Dish 7"></div>
+        <div class="gallery-item"><img src="egg8.jpg" alt="Egg Dish 8"></div>
+    </div>
+
+    <!-- Contact & Social Media Section -->
+    <div class="contact">
+        <h3>📍 સંપર્ક અને ઓર્ડર</h3>
+        <p><strong>માલિક:</strong> ยાસીન કુરેશી (Yasin Qureshi)</p>
+        <p><strong>સરનામું:</strong> માધવીની સામે, તાવડિયા ચોકડી પાસે, અમદાવાદ હાઇવે, સિદ્ધપુર, ગુજરાત 384151</p>
+        <p>🕒 <strong>સમય:</strong> સાંજે 5:00 વાગ્યાથી રાત્રે 11:00 વાગ્યા સુધી</p>
         
+        <a href="tel:+918141756010" class="btn-call">📞 કોલ કરો: 8141756010</a><br>
+        
+        <a href="https://wa.me." target="_blank" class="btn-whatsapp">💬 WhatsApp પર ઓર્ડર કરો</a><br>
+        
+        <!-- Google Maps Location Button -->
+        <a href="https://maps.app.goo.gl/9Q3ZZpeK5YNMWxPw7?g_st=ac" target="_blank" class="btn-maps">📍 ગૂગલ મેપ પર લોકેશન જુઓ</a><br>
+        
+        <a href="https://www.instagram.com/yasin_kureshi__756?cplk=MTN1eTF3djd0M3BsdA==" target="_blank" class="btn-insta">📸 ઇન્સ્ટાગ્રામ પર ફોલો કરો</a>
+    </div>
+
+</body>
+</html>
