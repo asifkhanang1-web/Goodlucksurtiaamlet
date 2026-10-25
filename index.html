@@ -5,65 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ગુડલક સુરતી આમલેટ - સિદ્ધપુર</title>
     <style>
-        /* मोबाइल और एंड्रॉइड के लिए विशेष इन-बिल्ट डिज़ाइन */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; bg-color: #f9fafb; color: #333; line-height: 1.6; padding-bottom: 30px; }
-        
-        /* हेडर */
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f9fafb; color: #333; line-height: 1.6; }
         header { background: #f59e0b; color: white; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        header h1 { font-size: 22px; margin-bottom: 8px; }
-        nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; font-size: 14px; }
-        
-        /* हीरो सेक्शन */
+        header h1 { font-size: 22px; margin-bottom: 5px; }
         .hero { background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%); color: white; padding: 40px 20px; text-align: center; }
-        .hero h2 { font-size: 28px; margin-bottom: 10px; }
-        .hero p { font-size: 16px; margin-bottom: 20px; opacity: 0.9; }
-        
-        /* बटन */
-        .btn-whatsapp { background: #22c55e; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-size: 16px; margin-bottom: 10px; }
-        
-        /* जानकारी बार */
-        .info-bar { background: white; padding: 15px; text-align: center; font-weight: bold; border-bottom: 1px solid #e5e7eb; color: #4b5563; font-size: 14px; }
-        
-        /* मेनू सेक्शन */
-        .menu-section { padding: 30px 15px; max-w: 600px; margin: 0 auto; }
-        .menu-section h3 { text-align: center; font-size: 24px; margin-bottom: 25px; color: #1f2937; }
-        .menu-card { background: white; padding: 20px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #f59e0b; }
-        .menu-card tag { background: #fef3c7; color: #92400e; font-size: 12px; padding: 3px 8px; border-radius: 10px; font-weight: bold; display: inline-block; margin-bottom: 5px; }
+        .hero h2 { font-size: 26px; margin-bottom: 10px; }
+        .hero p { font-size: 15px; margin-bottom: 20px; opacity: 0.9; }
+        .btn-whatsapp { background: #22c55e; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-size: 16px; }
+        .info-bar { background: white; padding: 12px; text-align: center; font-weight: bold; border-bottom: 1px solid #e5e7eb; color: #4b5563; font-size: 13px; }
+        .menu-section { padding: 25px 15px; max-w: 500px; margin: 0 auto; }
+        .menu-section h3 { text-align: center; font-size: 22px; margin-bottom: 20px; }
+        .menu-card { background: white; padding: 15px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #f59e0b; }
         .menu-card h4 { font-size: 18px; color: #111827; }
         .menu-card p { font-size: 14px; color: #6b7280; margin-top: 5px; }
-        
-        /* डिलिवरी बॉक्स */
-        .delivery-box { background: #fffbeb; border: 1px solid #fef3c7; padding: 20px; border-radius: 20px; text-align: center; margin: 20px 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .delivery-box h3 { color: #b45309; font-size: 20px; margin-bottom: 5px; }
-        .delivery-box .price { font-size: 18px; color: #ea580c; font-weight: bold; margin-bottom: 10px; }
-        .delivery-box .note { background: #fef3c7; color: #78350f; padding: 10px; border-radius: 10px; font-size: 13px; margin-top: 10px; font-weight: bold; }
-        
-        /* फुटर और संपर्क */
-        footer { background: #111827; color: #d1d5db; padding: 30px 20px; text-align: center; margin-top: 40px; font-size: 14px; }
-        footer h3 { color: white; margin-bottom: 15px; font-size: 18px; }
-        .contact-details { text-align: left; max-width: 400px; margin: 0 auto 20px auto; }
-        .contact-details p { margin-bottom: 10px; }
-        .social-links a { display: inline-block; width: 40px; height: 40px; line-height: 40px; background: #374151; color: white; border-radius: 50%; margin: 0 10px; text-decoration: none; font-weight: bold; }
-        .social-links .insta { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .delivery-box { background: #fffbeb; border: 1px solid #fef3c7; padding: 20px; border-radius: 15px; text-align: center; margin: 15px; }
+        .delivery-box h3 { color: #b45309; font-size: 18px; }
+        .delivery-box .price { font-size: 18px; color: #ea580c; font-weight: bold; margin: 5px 0; }
+        .delivery-box .note { background: #fef3c7; color: #78350f; padding: 8px; border-radius: 8px; font-size: 12px; font-weight: bold; margin-top: 10px; }
+        footer { background: #111827; color: #d1d5db; padding: 25px 15px; text-align: center; font-size: 14px; margin-top: 30px; }
+        .contact-details { text-align: left; max-width: 350px; margin: 0 auto 15px auto; }
+        .contact-details p { margin-bottom: 8px; }
+        .social-links a { display: inline-block; padding: 8px 15px; color: white; border-radius: 5px; margin: 5px; text-decoration: none; font-weight: bold; font-size: 13px; }
+        .social-links .insta { background: #e1306c; }
         .social-links .wa { background: #22c55e; }
-        .footer-bottom { border-t: 1px solid #1f2937; padding-top: 20px; margin-top: 20px; font-size: 12px; opacity: 0.6; }
+        .footer-bottom { border-top: 1px solid #1f2937; padding-top: 15px; margin-top: 15px; font-size: 11px; opacity: 0.6; }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <h1>🍳 ગુડલક સુરતી આમલેટ</h1>
-        <nav>
-            <a href="#home">હોમ</a>
-            <a href="#menu">મેનૂ</a>
-            <a href="#delivery">ડિલિવરી</a>
-        </nav>
     </header>
 
-    <!-- Hero -->
-    <section id="home" class="hero">
+    <section class="hero">
         <h2>સ્વાદિષ્ટ અને ચટાકેદાર ઇંડાની આઇટમો</h2>
         <p>સિદ્ધપુરમાં અસલી સુરતી ટેસ્ટમાં લાવો, લોચો અને આમલેટનો આનંદ માણો!</p>
         <a href="https://wa.meેલો%20યાસીનભાઈ,%20મારે%20ઓર્ડર%20આપવો%20છે." target="_blank" class="btn-whatsapp">
@@ -71,61 +46,49 @@
         </a>
     </section>
 
-    <!-- Info Bar -->
     <div class="info-bar">
-        🕒 સમય: સાંજે ૫:૦૦ થી રાત્રે ૧૧:૦૦ | 🛵 હોમ ડિલિવરી ચાલુ
+        🕒 સમય: સાંજે ૫:૦０ થી રાત્રે ૧૧:૦０ | 🛵 હોમ ડિલિવરી ચાલુ
     </div>
 
-    <!-- Menu -->
-    <section id="menu" class="menu-section">
+    <section class="menu-section">
         <h3>અમારું ખાસ મેનૂ</h3>
-        
         <div class="menu-card">
-            <tag>ખાસ આઇટમ</tag>
-            <h4>સ્વાદિષ્ટ સુરતી લોચો</h4>
+            <h4>✨ સ્વાદિષ્ટ સુરતી લોચો</h4>
             <p>સ્પેશિયલ મસાલા અને બટર સાથે ગરમા-ગરમ પીરસવામાં આવતો અસલી સુરતી ટેસ્ટ.</p>
         </div>
-
         <div class="menu-card">
-            <tag>પોપ્યુલર</tag>
-            <h4>ચટાકેદાર લચકો</h4>
+            <h4>🔥 ચટાકેદાર લચકો</h4>
             <p>તીખા અને ચટાકેદાર મસાલાઓનું અદભુત મિશ્રણ જે જીભ પર સ્વાદ છોડી જશે.</p>
         </div>
-
         <div class="menu-card">
-            <tag>રેગ્યુલર</tag>
-            <h4>સાદા બોઇલ અને આમલેટ</h4>
+            <h4>🥚 સાદા બોઇલ અને આમલેટ</h4>
             <p>તાજા ઇંડામાંથી બનતી હાઇજીનિક અને પ્રોટીનથી ભરપૂર રેગ્યુલર આઇટમો.</p>
         </div>
     </section>
 
-    <!-- Delivery -->
-    <section id="delivery" class="delivery-box">
+    <section class="delivery-box">
         <h3>હોમ ડિલિવરી સર્વિસ</h3>
         <p class="price">ડિલિવરી ચાર્જ: રૂ. ૫૦ એક્સ્ટ્રા</p>
         <p>🛵 ઝડપી અને સ્વચ્છતા સાથે સેવા માત્ર સિદ્ધપુર પૂરતી જ.</p>
         <div class="note">
-            ⚠️ નોંધ: ઓર્ડર આપ્યા પછી ૧૧ થી ૨૦ મિનિટમાં વસ્તુ હાજરમાં હશે.
+            ⚠️ નોંધ: ઓર્ડર આપ્યા પછી ૧૫ થી ૨૦ મિનિટમાં વસ્તુ હાજરમાં હશે.
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <h3>સંપર્ક અને સરનામું</h3>
         <div class="contact-details">
-            <p>📍 <strong>સરનામું:</strong> માધવીની સામે, તાવડિયા ચોકડી નજીક, અમદાવાદ હાઇવે, સિદ્ધપુર, ગુજરાત - ૩૮૪૧૫૧</p>
-            <p>📞 <strong>મોબાઈલ:</strong> <a href="tel:8141756010" style="color: #f59e0b; text-decoration: none;">8141756010</a></p>
+            <p>📍 <strong>સરનામું:</strong> માધવીની સામે, તાવડિયા ચોકડી નજીક, અમદાવાદ હાઇવે, સિદ્ધપુર - ૩૮૪૧૫૧</p>
+            <p>📞 <strong>મોબાઈલ:</strong> 8141756010</p>
             <p>👤 <strong>માલિક:</strong> યાસીન કુરેશી</p>
         </div>
-        
         <div class="social-links">
-            <a href="https://instagram.com" target="_blank" class="insta">IG</a>
-            <a href="https://wa.me" target="_blank" class="wa">WA</a>
+            <a href="https://instagram.com" target="_blank" class="insta">Instagram</a>
+            <a href="https://wa.me" target="_blank" class="wa">WhatsApp</a>
         </div>
-
         <div class="footer-bottom">
             <p>&copy; 2026 ગુડલક સુરતી આમલેટ. સર્વ હક સ્વાધીન.</p>
-            <p style="margin-top: 5px;">અમારી બીજી શાખા: અફીણ ગેટ, સિવિલ હોસ્પિટલની સામે, સિદ્ધપુર</p>
+            <p>બીજી શાખા: અફીણ ગેટ, સિવિલ હોસ્પિટલની સામે, સિદ્ધપુર</p>
         </div>
     </footer>
 
